@@ -5,19 +5,24 @@ Group: 10
 Description:
 '''
 
+
+
+from sneakyspy import SneakySpy
+from hackerspy import HackerSpy
+
+from grappling_hook import GrapplingHook
+from goggles import Goggles
+from hackingkit import HackingKit
+from lockpick import Lockpick
+from jetpack import Jetpack
+
 import random
 import os
 
 
-
-# Challenge 1: Cliffside
+# CHALLENGES 
 
 def cliffside_challenge(spy):
-    """
-    Spy must climb a rocky cliff.
-    If agility >= 6 → automatic success.
-    Otherwise → 1–5 guessing game with 3 attempts.
-    """
     print("\n=== Cliffside Challenge ===")
     print("A steep rocky cliff blocks your path.")
 
@@ -38,14 +43,8 @@ def cliffside_challenge(spy):
     print("You failed to climb the cliff.")
     return False
 
-# Challenge 2: Laser Grid
 
 def laser_grid_challenge(spy):
-    """
-    Spy must dodge a laser grid.
-    If stealth >= 6 → automatic success.
-    Otherwise → memorize a 4‑direction sequence.
-    """
     print("\n=== Laser Grid Challenge ===")
     print("A hallway filled with laser beams blocks your path.")
 
@@ -73,14 +72,7 @@ def laser_grid_challenge(spy):
     return False
 
 
-# Challenge 3: Vent Shaft
-
 def vent_shaft_challenge(spy):
-    """
-    Spy must crawl through a ventilation shaft.
-    If agility >= 6 → automatic success.
-    Otherwise → tap Enter 5 times.
-    """
     print("\n=== Vent Shaft Challenge ===")
     print("You must crawl quickly through a narrow ventilation shaft.")
 
@@ -96,14 +88,7 @@ def vent_shaft_challenge(spy):
     return True
 
 
-# Challenge 4: Security
-
 def security_terminal_challenge(spy):
-    """
-    Spy must hack a security terminal.
-    If tech ability >= 6 → automatic success.
-    Otherwise → guess a 3‑character pattern of X/O with hints.
-    """
     print("\n=== Security Terminal Challenge ===")
     print("You must hack the security terminal to open the door.")
 
@@ -127,3 +112,95 @@ def security_terminal_challenge(spy):
 
     print("You failed to hack the terminal. Mission failed.")
     return False
+
+
+# SPY SELECTION
+
+def choose_spy():
+     #Presents the spy selection menu and returns the constucted spy object
+
+    while True:
+        print("\nChoose your Spy:")
+        print("1. Sneaky Spy")
+        print("2. Hacker Spy")
+
+        choice = input("Enter choice: ")
+
+        if choice == "1":
+            return SneakySpy()
+        elif choice == "2":
+            return HackerSpy()
+        else:
+            print("Invalid choice. Try again.")
+
+
+# GADGET SELECTION
+
+def choose_gadgets(spy):
+
+    #Presents the gadget menu twice, each gadget decorates the spy and returns the spy fully decorated
+
+    gadgets = {
+        "1": ("Grappling Hook", GrapplingHook),
+        "2": ("Goggles", Goggles),
+        "3": ("Hacking Kit", HackingKit),
+        "4": ("Lockpick", Lockpick),
+        "5": ("Jetpack", Jetpack)
+    }
+
+    print("\nChoose TWO gadgets for your spy.")
+
+    for _ in range(2):
+        while True:
+            print("\nAvailable Gadgets:")
+            for key, (name, _) in gadgets.items():
+                print(f"{key}. {name}")
+
+            choice = input("Enter choice: ")
+
+            if choice in gadgets:
+                name, decorator = gadgets.pop(choice)
+                spy = decorator(spy)
+                print(f"Added {name}!")
+                break
+            else:
+                print("Invalid choice. Try again.")
+
+    return spy
+
+
+# MAIN GAME LOOP
+
+def main():
+    print("=== Welcome to Spy Mission ===")
+
+    spy = choose_spy()
+    spy = choose_gadgets(spy)
+
+    print("\nYour Spy Loadout:")
+    print(spy)
+
+    print("\n=== Mission Start ===")
+
+    if not cliffside_challenge(spy):
+        print("\nMission Failed.")
+        return
+
+    if not laser_grid_challenge(spy):
+        print("\nMission Failed.")
+        return
+
+    if not vent_shaft_challenge(spy):
+        print("\nMission Failed.")
+        return
+
+    if not security_terminal_challenge(spy):
+        print("\nMission Failed.")
+        return
+
+    print("\nCongratulations! You completed the mission successfully!")
+
+
+if __name__ == "__main__":
+    main()
+
