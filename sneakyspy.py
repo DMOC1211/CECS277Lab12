@@ -2,13 +2,13 @@
 Name: Jacob Miranda & Daniel Puerto
 Date: 4/22/26
 Group: 10
-Description:
+Description: Creates the sneaky spy class
 '''
 from spy import Spy
 
 
 class SneakySpy(Spy):
-    """Spy specializing in stealth and agility."""
+    #Spy thriving in stealth and agility.
 
     def description(self):
         return "Sneaky Spy"
