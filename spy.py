@@ -1,0 +1,26 @@
+
+
+
+import abc
+
+class Spy(abc.ABC):
+
+    @abc.abstractmethod
+    def description(self):
+        pass
+
+    @abc.abstractmethod
+    def agility(self):
+        pass
+
+    @abc.abstractmethod
+    def stealth(self):
+        pass
+
+    @abc.abstractmethod
+    def tech_ability(self):
+        pass
+    
+
+    def __str__(self):
+        return f"{self.description} spy:  Agility: {self.agility}, Stealth: {self.stealth}, Tech: {self.tech_ability}"
