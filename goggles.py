@@ -5,9 +5,7 @@ Group: 10
 Description: Creates the goggles gadget for the spy
 '''
 
-
 from spy_decorator import SpyDecorator
-
 
 class Goggles(SpyDecorator):
     """Adds agility +0, stealth +2, tech +1"""
