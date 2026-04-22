@@ -2,7 +2,7 @@
 Name: Jacob Miranda & Daniel Puerto
 Date: 4/22/26
 Group: 10
-Description: Creates the game and all the challenges that the spy needs to pass through. 
+Description: Creates the game, the user input as to which spy to select, and all the challenges that the spy needs to pass through. 
 '''
 
 
