@@ -24,7 +24,7 @@ class Spy(abc.ABC):
     @abc.abstractmethod
     def tech_ability(self):
         pass
-    
+
 
     def __str__(self):
-        return f"{self.description} spy:  Agility: {self.agility}, Stealth: {self.stealth}, Tech: {self.tech_ability}"
+        return f"{self.description()}:  \nAgility: {self.agility()}, Stealth: {self.stealth()}, Tech: {self.tech_ability()}"
