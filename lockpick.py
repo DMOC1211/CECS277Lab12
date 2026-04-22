@@ -1,9 +1,11 @@
 '''
+Name: Jacob Miranda & Daniel Puerto
+Date: 4/22/26
+Group: 10
+Description: Creates the lockpick gadget for the spy
 '''
 
 from spy_decorator import SpyDecorator
-
-
 
 class Lockpick(SpyDecorator):
     """Adds agility +1, stealth +2, tech +0"""
