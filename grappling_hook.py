@@ -1,4 +1,8 @@
 '''
+Name: Jacob Miranda & Daniel Puerto
+Date: 4/22/26
+Group: 10
+Description: Creates the Grappling hook gadget made from the base of the spy_decorator class.
 '''
 
 from spy_decorator import SpyDecorator
