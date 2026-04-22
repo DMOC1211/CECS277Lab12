@@ -9,6 +9,7 @@ import abc
 
 class Spy(abc.ABC):
 
+    #Creates the description, agility, stealth and tech ability attributes of the spy
     @abc.abstractmethod
     def description(self):
         pass
