@@ -1,4 +1,8 @@
 '''
+Name: Jacob Miranda & Daniel Puerto
+Date: 4/22/26
+Group: 10
+Description: Creates the class that is the base class for all spy objects
 '''
 
 from abc import ABC
@@ -6,10 +10,10 @@ from spy import Spy
 
 
 class SpyDecorator(Spy, ABC):
-    """
-    Base decorator class for Spy objects.
-    Wraps another Spy and forwards all stat methods.
-    """
+    
+    
+    #Wraps another Spy and forwards all stat methods.
+    
 
     def __init__(self, s: Spy):
         self._spy = s
