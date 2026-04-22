@@ -1,13 +1,11 @@
 '''
+Name: Jacob Miranda & Daniel Puerto
+Date: 4/22/26
+Group: 10
+Description: Creates the jetpack gadget for the spy 
 '''
 
-
-
 from spy_decorator import SpyDecorator
-
-
-
-
 
 class Jetpack(SpyDecorator):
     """Adds agility +3, stealth –1, tech +1"""
