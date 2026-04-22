@@ -8,6 +8,7 @@ Description: Creates the Grappling hook gadget made from the base of the spy_dec
 from spy_decorator import SpyDecorator
 
 class GrapplingHook(SpyDecorator):
+    ##Adds agility +2, stealth +1, tech +0
 
     def description(self):
         return self._spy.description() + " + Grappling Hook"
