@@ -2,13 +2,13 @@
 Name: Jacob Miranda & Daniel Puerto
 Date: 4/22/26
 Group: 10
-Description:
+Description: Creates the hackerspy class
 '''
 from spy import Spy
 
 
 class HackerSpy(Spy):
-    """Spy specializing in technology and hacking."""
+    #Spy specializing in technology and hacking.
 
     def description(self):
         return "Hacker Spy"
