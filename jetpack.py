@@ -8,7 +8,7 @@ Description: Creates the jetpack gadget for the spy
 from spy_decorator import SpyDecorator
 
 class Jetpack(SpyDecorator):
-    """Adds agility +3, stealth –1, tech +1"""
+    #Adds agility +3, stealth –1, tech +1
 
     def description(self):
         return self._spy.description() + " + Jetpack"
