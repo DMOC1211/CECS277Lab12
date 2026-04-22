@@ -8,7 +8,7 @@ Description: Creates the lockpick gadget for the spy
 from spy_decorator import SpyDecorator
 
 class Lockpick(SpyDecorator):
-    """Adds agility +1, stealth +2, tech +0"""
+    #Adds agility +1, stealth +2, tech +0
 
     def description(self):
         return self._spy.description() + " + Lockpick"
