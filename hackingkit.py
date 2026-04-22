@@ -8,7 +8,7 @@ Description: Creates the hacking kit gadget for the spy
 from spy_decorator import SpyDecorator
 
 class HackingKit(SpyDecorator):
-    """Adds agility –1, stealth –1, tech +3"""
+    #Adds agility –1, stealth –1, tech +3
 
     def description(self):
         return self._spy.description() + " + Hacking Kit"
