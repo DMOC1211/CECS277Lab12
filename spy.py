@@ -2,7 +2,7 @@
 Name: Jacob Miranda & Daniel Puerto
 Date: 4/22/26
 Group: 10
-Description:
+Description: Creates the spy base class and returns the spy's traits after the gadgets stats are added.
 '''
 
 import abc
